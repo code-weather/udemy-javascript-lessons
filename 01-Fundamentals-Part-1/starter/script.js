@@ -1,3 +1,4 @@
+/* 
 let js = "amazing";
 console.log(40 + 8 + 23 - 10);
 
@@ -19,5 +20,15 @@ let $new = "my gaming computer";
 
 let bing_bong = "Ling long";
 
+console.log($new);
+console.log(bing_bong);
+
 // Convention that are reserved that'll never change
 let PI = 3.14159;
+*/
+
+////////////////
+// BOOLEAN
+////////////////
+let javascriptIsFun = true;
+console.log(javascriptIsFun);
