@@ -32,3 +32,10 @@ let PI = 3.14159;
 ////////////////
 let javascriptIsFun = true;
 console.log(javascriptIsFun);
+
+// typeof shows what type of data type
+console.log(typeof true);
+console.log(typeof javascriptIsFun);
+console.log(typeof 23);
+console.log(typeof "Jameson");
+
