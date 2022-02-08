@@ -39,3 +39,11 @@ console.log(typeof javascriptIsFun);
 console.log(typeof 23);
 console.log(typeof "Jameson");
 
+// Dynamic typing - Change the type of value that is held in a variable
+javascriptIsFun = "Yes!";
+console.log(javascriptIsFun); // It logs as string
+
+// Undefined
+let year;
+console.log(year);
+console.log(typeof year);
