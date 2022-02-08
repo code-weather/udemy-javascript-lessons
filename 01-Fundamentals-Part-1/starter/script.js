@@ -47,3 +47,9 @@ console.log(javascriptIsFun); // It logs as string
 let year;
 console.log(year);
 console.log(typeof year);
+
+year = 1998; // Assigned new value to the variable "year"...Remember it's called dynamic typing
+console.log(typeof year);
+
+// An error that exist in typeof operator
+console.log(typeof null);
