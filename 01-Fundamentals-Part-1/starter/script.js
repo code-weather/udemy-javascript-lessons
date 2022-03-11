@@ -25,7 +25,6 @@ console.log(bing_bong);
 
 // Convention that are reserved that'll never change
 let PI = 3.14159;
-*/
 
 ////////////////
 // BOOLEAN
@@ -53,3 +52,54 @@ console.log(typeof year);
 
 // An error that exist in typeof operator
 console.log(typeof null);
+
+
+//////////////////////////////
+// let, const, and var
+//////////////////////////////
+let age = 24;
+age = 25;
+console.log(age);
+
+// Cannot change const variable...therefore console.log will return an error
+const birthYear = 1998;
+// birthYear = 1999;
+// console.log(birthYear);
+
+// Cannot declare empty const variable
+const job;
+*/
+
+//////////////////////
+// Basic Operators
+//////////////////////
+const now = 2032;
+const ageJameson = now - 1998;
+const ageFutureShorty = now - 2001;
+console.log(ageJameson, ageFutureShorty);
+
+console.log(ageJameson * 2, ageJameson / 10, 2 ** 3);
+// 2 ** 3 means 2 to the power of 3 = 2 * 2 * 2
+
+const firstName = "Jameson";
+const lastName = "Wang";
+console.log(firstName + " " + lastName); // Concatenate Strings
+console.log(`${firstName} ${lastName}`); // Template Strings
+
+// Assignment operators
+let x = 10 + 5; // 15
+x += 10; // x = x + 10 = 25
+x *= 4; // x = x * 4 = 100
+x++; // x = x + 1 = 100
+x--; // x = x - 1 = 100
+x--; // x = x - 1 = 99
+console.log(x);
+
+// Comparison operators
+console.log(ageJameson > ageFutureShorty); // >, <, >=, <=
+console.log(ageFutureShorty >= 100);
+
+const isFullAge = ageFutureShorty >= 18;
+console.log(isFullAge);
+
+console.log(now - 1998 > now - 2001);
