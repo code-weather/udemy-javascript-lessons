@@ -68,7 +68,6 @@ const birthYear = 1998;
 
 // Cannot declare empty const variable
 const job;
-*/
 
 //////////////////////
 // Basic Operators
@@ -103,3 +102,51 @@ const isFullAge = ageFutureShorty >= 18;
 console.log(isFullAge);
 
 console.log(now - 1998 > now - 2001);
+*/
+
+///////////////////////
+// //Operator Precedence
+///////////////////////
+// const now = 2037;
+// const ageJameson = now - 1998;
+// const ageFutureShorty = now - 2018;
+
+// console.log(now - 1998 > now - 2018);
+
+// console.log(25 - 10 - 5); // Associativity from left-to-right
+
+// // example of associativity from right-to-left
+// let x, y;
+// x = y = 25 - 10 - 5; // x = y = 10, x = 10
+// console.log(x, y);
+
+// // Grouping (PEMDAS) operator type
+// // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+// // Operators with higher precedence become the operands of operators with lower precedence.
+// const averageAge = (ageJameson + ageFutureShorty) / 2; // Example of PEMDAS
+// console.log(ageJameson, ageFutureShorty, averageAge);
+
+/////////////////////////////////
+// Strings and Template Literals
+/////////////////////////////////
+const firstName = "Jameson";
+const job = "software engineer";
+const birthYear = 1998;
+const year = 2022;
+
+const jameson =
+  "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
+console.log(jameson);
+
+const jamesonNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`;
+console.log(jamesonNew);
+
+console.log(`Just a regular string...`);
+
+console.log("String with \n\
+multiple \n\
+lines");
+
+console.log(`String
+multiple
+lines`);

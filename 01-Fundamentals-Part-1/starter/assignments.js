@@ -24,3 +24,9 @@ const continent = "North America";
 const population = 331;
 isIsland = false;
 */
+
+// 4. LECTURE: Basic Operators
+let population = 331;
+console.log(population / 2);
+population++;
+console.log(population);
