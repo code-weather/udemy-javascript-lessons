@@ -126,27 +126,87 @@ console.log(now - 1998 > now - 2001);
 // const averageAge = (ageJameson + ageFutureShorty) / 2; // Example of PEMDAS
 // console.log(ageJameson, ageFutureShorty, averageAge);
 
-/////////////////////////////////
-// Strings and Template Literals
-/////////////////////////////////
-const firstName = "Jameson";
-const job = "software engineer";
-const birthYear = 1998;
-const year = 2022;
+// /////////////////////////////////
+// // Strings and Template Literals
+// /////////////////////////////////
+// const firstName = "Jameson";
+// const job = "software engineer";
+// const birthYear = 1998;
+// const year = 2022;
 
-const jameson =
-  "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
-console.log(jameson);
+// const jameson =
+//   "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
+// console.log(jameson);
 
-const jamesonNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`;
-console.log(jamesonNew);
+// const jamesonNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`;
+// console.log(jamesonNew);
 
-console.log(`Just a regular string...`);
+// console.log(`Just a regular string...`);
 
-console.log("String with \n\
-multiple \n\
-lines");
+// console.log("String with \n\
+// multiple \n\
+// lines");
 
-console.log(`String
-multiple
-lines`);
+// console.log(`String
+// multiple
+// lines`);
+
+// //////////////////////////////////////////
+// // Taking Decisions: if / else Statements
+// //////////////////////////////////////////
+// const age = 15;
+
+// if (age >= 19) {
+//   console.log("Jameson can start driving");
+// } else {
+//   const yearsLeft = 18 - age;
+//   console.log(`You're too young. Wait another ${yearsLeft} years`);
+// }
+
+// // if() {
+
+// // } else {
+
+// // }
+// // This is known as a controlled structure
+// // else block is OPTIONAL. W/o else block, there will be nothing executed
+
+// const birthYear = 2012;
+
+// let century; // Must define century outside the control structure and conditionally re-assign century
+// if (birthYear <= 2000) {
+//   century = 20;
+// } else {
+//   century = 21;
+// }
+
+// console.log(century);
+
+// ////////////////////////////////
+// // Type Conversion and Coercion
+// ////////////////////////////////
+// // Type conversion
+// const inputYear = "1998";
+// console.log(Number(inputYear), inputYear);
+// console.log(inputYear + 18); // Result: 199818
+// console.log(Number(inputYear) + 18); // Result: 2016
+
+// console.log(Number("Jameson")); // Result: NaN (not a number)
+// console.log(typeof NaN); // Result: number
+
+// console.log(String(23), 23); // Result: 23(string), 23
+
+// // Type coercion
+// console.log("I am " + 23 + " years old");
+// console.log("23" - "10" - 3);
+// console.log("23" / "2");
+
+// let n = "1" + 1; // "11"
+// n = n - 1;
+// console.log(n);
+
+// let a = 2 + 3 + 4 + "5"; // "95"
+// console.log(a);
+
+// let b = "10" - "4" - "3" - 2 + "5"; // "15"
+// console.log(b);
