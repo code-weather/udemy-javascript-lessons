@@ -210,3 +210,49 @@ console.log(now - 1998 > now - 2001);
 
 // let b = "10" - "4" - "3" - 2 + "5"; // "15"
 // console.log(b);
+
+///////////////////////////
+// Truthy and falsy values
+///////////////////////////
+// 5 falsy values: 0, "" (empty string), undefined, null, NaN (Not a Number)
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean("Jonas"));
+console.log(Boolean({}));
+console.log(Boolean(""));
+
+const noMoney = 0; // value is 0
+if (noMoney) {
+  console.log("Don't spend it all");
+} else {
+  console.log("You should get a job!");
+}
+
+const money = 5;
+if (money) {
+  console.log("Don't spend it all");
+} else {
+  console.log("You should get a job!");
+}
+
+let height1; // undefined value
+if (height1) {
+  console.log("Height is defined!");
+} else {
+  console.log("Height is UNDEFINED");
+}
+
+let height2 = 0; // value number of 0
+if (height2) {
+  console.log("Height is defined!");
+} else {
+  console.log("Height is UNDEFINED");
+}
+
+let height3 = 6;
+if (height3) {
+  console.log("Height is defined!");
+} else {
+  console.log("height is UNDEFINED");
+}
