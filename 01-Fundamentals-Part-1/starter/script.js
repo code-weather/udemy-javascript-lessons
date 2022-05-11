@@ -320,49 +320,65 @@ console.log(now - 1998 > now - 2001);
 //   console.log("Someone else should drive...");
 // }
 
-////////////////////////
-// The Switch Statement
-////////////////////////
-const day = "Wednesday";
+// ////////////////////////
+// // The Switch Statement
+// ////////////////////////
+// const day = "Wednesday";
 
-switch (day) {
-  case "Monday": // day === "Monday"
-    console.log("Work at Bean Square");
-    console.log("Try to practice coding");
-    break; // w/o the break it will execute Monday and Tuesday
-  case "Tuesday":
-    console.log("Code on a Tuesday");
-    break;
-  case "Wednesday":
-    console.log("Do DUH dancing");
-    break;
-  case "Thursday":
-    console.log("Sleep in LMAO it's a free day");
-    break;
-  case "Friday":
-    console.log("Work and I'm free");
-    break;
-  case "Saturday":
-    console.log("Another free day");
-    break;
-  case "Sunday":
-    console.log("Sabbath Day. The Lord's day");
-    break;
-  default:
-    console.log("Not a valid day!");
+// switch (day) {
+//   case "Monday": // day === "Monday"
+//     console.log("Work at Bean Square");
+//     console.log("Try to practice coding");
+//     break; // w/o the break it will execute Monday and Tuesday
+//   case "Tuesday":
+//     console.log("Code on a Tuesday");
+//     break;
+//   case "Wednesday":
+//     console.log("Do DUH dancing");
+//     break;
+//   case "Thursday":
+//     console.log("Sleep in LMAO it's a free day");
+//     break;
+//   case "Friday":
+//     console.log("Work and I'm free");
+//     break;
+//   case "Saturday":
+//     console.log("Another free day");
+//     break;
+//   case "Sunday":
+//     console.log("Sabbath Day. The Lord's day");
+//     break;
+//   default:
+//     console.log("Not a valid day!");
+// }
+
+// if (day === "Monday") {
+//   console.log("Work at Bean Square");
+//   console.log("Try to practice coding");
+// } else if (day === "Tuesday") {
+//   console.log("Code on a Tuesday");
+// } else if (day === "Wednesday" || day === "Thursday") {
+//   console.log("Write code and practice");
+// } else if (day === "Friday") {
+//   console.log("Getting ready for the weekend");
+// } else if (day === "Saturday" || day === "Sunday") {
+//   console.log("Enjoy the weekend");
+// } else {
+//   console.log("Not a valid day!");
+// }
+
+//////////////////////////////
+// STATEMENTS AND EXPRESSIONS
+//////////////////////////////
+// Expression => Code that produces a value...for example:
+3 + 4; // Will produce a value of 7
+1991; // will produce a value
+true && false && !false; // Return a boolean value
+
+// Statements => A larger piece of code that is executed but does not produce a value on its own...for example:
+if (24 > 10) {
+  const str = "24 is greater";
 }
 
-if (day === "Monday") {
-  console.log("Work at Bean Square");
-  console.log("Try to practice coding");
-} else if (day === "Tuesday") {
-  console.log("Code on a Tuesday");
-} else if (day === "Wednesday" || day === "Thursday") {
-  console.log("Write code and practice");
-} else if (day === "Friday") {
-  console.log("Getting ready for the weekend");
-} else if (day === "Saturday" || day === "Sunday") {
-  console.log("Enjoy the weekend");
-} else {
-  console.log("Not a valid day!");
-}
+const me = "Jameson"; // The string "Jameson" is an expression because it produces a value
+console.log(`I'm ${me} and I am ${2022 - 1998} years old`); // The variable ${me} inside curly brackets is an expression that produces a value of "Jameson" and ${2022 - 1998} is an expression that'll produce a value of 24.
