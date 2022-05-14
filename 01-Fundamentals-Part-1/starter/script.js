@@ -367,18 +367,56 @@ console.log(now - 1998 > now - 2001);
 //   console.log("Not a valid day!");
 // }
 
-//////////////////////////////
-// STATEMENTS AND EXPRESSIONS
-//////////////////////////////
-// Expression => Code that produces a value...for example:
-3 + 4; // Will produce a value of 7
-1991; // will produce a value
-true && false && !false; // Return a boolean value
+// //////////////////////////////
+// // STATEMENTS AND EXPRESSIONS
+// //////////////////////////////
+// // Expression => Code that produces a value...for example:
+// 3 + 4; // Will produce a value of 7
+// 1991; // will produce a value
+// true && false && !false; // Return a boolean value
 
-// Statements => A larger piece of code that is executed but does not produce a value on its own...for example:
-if (24 > 10) {
-  const str = "24 is greater";
+// // Statements => A larger piece of code that is executed but does not produce a value on its own...for example:
+// if (24 > 10) {
+//   const str = "24 is greater";
+// }
+
+// const me = "Jameson"; // The string "Jameson" is an expression because it produces a value
+// console.log(`I'm ${me} and I am ${2022 - 1998} years old`); // The variable ${me} inside curly brackets is an expression that produces a value of "Jameson" and ${2022 - 1998} is an expression that'll produce a value of 24.
+
+//////////////////////////////////////
+// THE CONDITIONAL (TERNARY) OPERATOR
+//////////////////////////////////////
+/* NOTES:
+* Ternary operator is an EXRESSION
+SYNTAX: condition ? exprIfTrue : exprIfFalse
+
+Conditional chains
+const variable = (argument) => {
+  return condition1 ? value1
+    : condition2 ? value2
+    : condition3 ? value3
+    : value4;
+
+* Rule of thumb - use ternary operator for quick decisions.....If/else statement are used for bigger block of codes
 }
+*/
 
-const me = "Jameson"; // The string "Jameson" is an expression because it produces a value
-console.log(`I'm ${me} and I am ${2022 - 1998} years old`); // The variable ${me} inside curly brackets is an expression that produces a value of "Jameson" and ${2022 - 1998} is an expression that'll produce a value of 24.
+const age = 24;
+// age >= 18
+//   ? console.log("I can drink alcohol 🥂")
+//   : console.log("I'll stick with water 🌊");
+
+// More practical approach
+const drink = age >= 18 ? "alcohol" : "water";
+console.log(drink);
+
+// Example with an if/else statement
+let drink2;
+if (age >= 18) {
+  drink2 = "wine 🍷";
+} else {
+  drink2 = "water 🌊";
+}
+console.log(drink2);
+
+console.log(`I like to drink ${age >= 18 ? "alcohol" : "water"}`); // You can use ternary operator in a template literal because ternary operator IS AN EXPRESSION
