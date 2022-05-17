@@ -383,40 +383,43 @@ console.log(now - 1998 > now - 2001);
 // const me = "Jameson"; // The string "Jameson" is an expression because it produces a value
 // console.log(`I'm ${me} and I am ${2022 - 1998} years old`); // The variable ${me} inside curly brackets is an expression that produces a value of "Jameson" and ${2022 - 1998} is an expression that'll produce a value of 24.
 
-//////////////////////////////////////
-// THE CONDITIONAL (TERNARY) OPERATOR
-//////////////////////////////////////
-/* NOTES:
-* Ternary operator is an EXRESSION
-SYNTAX: condition ? exprIfTrue : exprIfFalse
+// //////////////////////////////////////
+// // THE CONDITIONAL (TERNARY) OPERATOR
+// //////////////////////////////////////
+// /* NOTES:
+// * Ternary operator is an EXRESSION
+// SYNTAX: condition ? exprIfTrue : exprIfFalse
 
-Conditional chains
-const variable = (argument) => {
-  return condition1 ? value1
-    : condition2 ? value2
-    : condition3 ? value3
-    : value4;
+// Conditional chains
+// const variable = (argument) => {
+//   return condition1 ? value1
+//     : condition2 ? value2
+//     : condition3 ? value3
+//     : value4;
 
-* Rule of thumb - use ternary operator for quick decisions.....If/else statement are used for bigger block of codes
-}
-*/
+// How to write multiple conditions:
+// condition1 ? condition2 ? Expression1 : Expression2 : Expression3
 
-const age = 24;
-// age >= 18
-//   ? console.log("I can drink alcohol 🥂")
-//   : console.log("I'll stick with water 🌊");
+// * Rule of thumb - use ternary operator for quick decisions.....If/else statement are used for bigger block of codes
+// }
+// */
 
-// More practical approach
-const drink = age >= 18 ? "alcohol" : "water";
-console.log(drink);
+// const age = 24;
+// // age >= 18
+// //   ? console.log("I can drink alcohol 🥂")
+// //   : console.log("I'll stick with water 🌊");
 
-// Example with an if/else statement
-let drink2;
-if (age >= 18) {
-  drink2 = "wine 🍷";
-} else {
-  drink2 = "water 🌊";
-}
-console.log(drink2);
+// // More practical approach
+// const drink = age >= 18 ? "alcohol" : "water";
+// console.log(drink);
 
-console.log(`I like to drink ${age >= 18 ? "alcohol" : "water"}`); // You can use ternary operator in a template literal because ternary operator IS AN EXPRESSION
+// // Example with an if/else statement
+// let drink2;
+// if (age >= 18) {
+//   drink2 = "wine 🍷";
+// } else {
+//   drink2 = "water 🌊";
+// }
+// console.log(drink2);
+
+// console.log(`I like to drink ${age >= 18 ? "alcohol" : "water"}`); // You can use ternary operator in a template literal because ternary operator IS AN EXPRESSION
