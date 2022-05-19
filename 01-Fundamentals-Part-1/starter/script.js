@@ -352,6 +352,8 @@ console.log(now - 1998 > now - 2001);
 //     console.log("Not a valid day!");
 // }
 
+// // V.S.
+
 // if (day === "Monday") {
 //   console.log("Work at Bean Square");
 //   console.log("Try to practice coding");
