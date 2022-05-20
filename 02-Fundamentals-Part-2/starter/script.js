@@ -79,12 +79,16 @@
 // const age3 = calcAge3(1998);
 // console.log(age3);
 
-const yearsUntilRetirement = (birthYear, firstName) => {
-  const age = 2022 - birthYear;
-  const retirement = 65 - age;
-  //   return retirement;
-  return `${firstName} retires in ${retirement} years`;
-};
+// const yearsUntilRetirement = (birthYear, firstName) => {
+//   const age = 2022 - birthYear;
+//   const retirement = 65 - age;
+//   //   return retirement;
+//   return `${firstName} retires in ${retirement} years`;
+// };
 
-console.log(yearsUntilRetirement(1998, "Jameson"));
-console.log(yearsUntilRetirement(1980, "Bob"));
+// console.log(yearsUntilRetirement(1998, "Jameson"));
+// console.log(yearsUntilRetirement(1980, "Bob"));
+
+/////////////////////////////////////
+// FUNCTIONS CALLING OTHER FUNCTIONS
+/////////////////////////////////////
