@@ -100,7 +100,13 @@ function fruitProcessor(apples, oranges) {
   // const applePieces = cutFruitPieces(apples);
   // const orangePieces = cutFruitPieces(oranges);
 
+  //return `Juice with ${applePieces} piece of apple and ${orangePieces} pieces of orange.`;
+
+  // OR
+
+  // ALL IN ONE
   return `Juice with ${cutFruitPieces(apples)} piece of apple and ${cutFruitPieces(oranges)} pieces of orange.`;
 }
 
 console.log(fruitProcessor(2, 3));
+
