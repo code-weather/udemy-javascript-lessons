@@ -12,9 +12,7 @@
 // // OR
 
 // const describeCountry2 = (country, population, capitalCity) => {
-//   console.log(
-//     `${country} has ${population} million people and its capital city is ${capitalCity}`
-//   );
+//   console.log(`${country} has ${population} million people and its capital city is ${capitalCity}`);
 // };
 
 // describeCountry2("United States", 331, "Washington D.C.");

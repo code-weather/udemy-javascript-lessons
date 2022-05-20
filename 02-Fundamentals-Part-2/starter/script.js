@@ -92,3 +92,15 @@
 /////////////////////////////////////
 // FUNCTIONS CALLING OTHER FUNCTIONS
 /////////////////////////////////////
+function cutFruitPieces(fruit) {
+  return fruit * 5;
+}
+
+function fruitProcessor(apples, oranges) {
+  // const applePieces = cutFruitPieces(apples);
+  // const orangePieces = cutFruitPieces(oranges);
+
+  return `Juice with ${cutFruitPieces(apples)} piece of apple and ${cutFruitPieces(oranges)} pieces of orange.`;
+}
+
+console.log(fruitProcessor(2, 3));
