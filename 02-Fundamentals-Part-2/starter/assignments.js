@@ -19,6 +19,7 @@
 // describeCountry2("Ting", 2, "Tong");
 // describeCountry2("Ding", 8, "Dong");
 
+
 // //////////////////////////////////////////////////////////////
 // // FUNCTION DECLARATIONS V.S. EXPRESSIONS V.S. ARROW FUNCTION
 // //////////////////////////////////////////////////////////////
@@ -55,23 +56,33 @@
 // const percPortugal3 = percentageOfWorld1(10);
 // console.log(percUSA3, percChina3, percPortugal3);
 
-/////////////////////////////////////
-// FUNCTIONS CALLING OTHER FUNCTIONS
-/////////////////////////////////////
-/*
-NOTE: Parameters can be reused within the function code block
-*/
 
-const percentageOfWorld1 = (population1) => {
-  return (population1 / 7900) * 100;
-};
+// /////////////////////////////////////
+// // FUNCTIONS CALLING OTHER FUNCTIONS
+// /////////////////////////////////////
+// /*
+// NOTE: Parameters can be reused within the function code block
+// */
 
-const describePopulation = (country, population) => {
-  const countryPopulation = percentageOfWorld1(population);
+// const percentageOfWorld1 = (population1) => {
+//   return (population1 / 7900) * 100;
+// };
 
-  return `${country} has ${population} million people, which is about ${countryPopulation}% of the world.`;
-};
+// const describePopulation = (country, population) => {
+//   // const countryPopulation = percentageOfWorld1(population);
 
-console.log(describePopulation("US", 334));
-console.log(describePopulation("Greece", 10));
-console.log(describePopulation("Taiwan", 23));
+//   // return `${country} has ${population} million people, which is about ${countryPopulation}% of the world.`;
+
+//   // OR...w/o the variable of 'const countryPopulation'
+
+//   return `${country} has ${population} million people, which is about ${percentageOfWorld1(population)}% of the world.`;
+// };
+
+// console.log(describePopulation("US", 334));
+// console.log(describePopulation("Greece", 10));
+// console.log(describePopulation("Taiwan", 23));
+
+
+//////////////////////////
+// INTRODUCTION TO ARRAYS
+//////////////////////////

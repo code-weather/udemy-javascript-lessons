@@ -16,6 +16,7 @@
 // if (passTest) hasDriversLicense = true;
 // if (hasDriversLicense) console.log("I can drive! :D");
 
+
 // ///////////////
 // // FUNCTION
 // ///////////////
@@ -38,6 +39,7 @@
 // };
 
 // console.log(fruitProcessor(5, 0));
+
 
 // ////////////////////////////////////////////////////////////////////////
 // // FUNCTION DECLARATIONS V.S. FUNCTION EXPRESSIONS V.S. ARROW FUNCTIONS
@@ -89,24 +91,69 @@
 // console.log(yearsUntilRetirement(1998, "Jameson"));
 // console.log(yearsUntilRetirement(1980, "Bob"));
 
-/////////////////////////////////////
-// FUNCTIONS CALLING OTHER FUNCTIONS
-/////////////////////////////////////
-function cutFruitPieces(fruit) {
-  return fruit * 5;
+
+// /////////////////////////////////////
+// // FUNCTIONS CALLING OTHER FUNCTIONS
+// /////////////////////////////////////
+// function cutFruitPieces(fruit) {
+//   return fruit * 5;
+// }
+
+// function fruitProcessor(apples, oranges) {
+//   // const applePieces = cutFruitPieces(apples);
+//   // const orangePieces = cutFruitPieces(oranges);
+
+//   //return `Juice with ${applePieces} piece of apple and ${orangePieces} pieces of orange.`;
+
+//   // OR
+
+//   // ALL IN ONE
+//   return `Juice with ${cutFruitPieces(apples)} piece of apple and ${cutFruitPieces(oranges)} pieces of orange.`;
+// }
+
+// console.log(fruitProcessor(2, 3));
+
+
+//////////////////////////
+// INTRODUCTION TO ARRAYS
+//////////////////////////
+// Alternative way to write an array (but not practical)
+const yearsArr = new Array(1991, 1992, 2005, 2043, "bing", true, "bong");
+console.log(yearsArr);
+
+const friend1 = "Joe";
+const friend2 = "Bri";
+const friend3 = "Mia";
+
+const friends = ["Joe", "Bri", "Mia"];
+console.log(friends);
+
+console.log(friends[0]); // "Joe"
+console.log(friends[2]); // "Mia"
+
+console.log(friends.length); // The amount of variables in an array
+console.log(friends[friends.length - 1]); // To get the last index of an array. (number of )
+
+friends[2] = "Aim"; // Changing index 2 ["Joe", "Bri", "Aim"]
+console.log(friends);
+// friends = ["Bob", "Alice"]...cannot change array
+
+const firstName = "Jameson";
+const arrVariables = [firstName, "ZhingZhangZhong", 5 + 5, "beep", "boop", true, friends];
+console.log(arrVariables);
+console.log(arrVariables.length)
+
+// Exercise
+const calcAge = function (birthYear) {
+  return 2037 - birthYear
 }
+const years = [1990, 1967, 2002, 2010, 2018];
 
-function fruitProcessor(apples, oranges) {
-  // const applePieces = cutFruitPieces(apples);
-  // const orangePieces = cutFruitPieces(oranges);
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
 
-  //return `Juice with ${applePieces} piece of apple and ${orangePieces} pieces of orange.`;
+console.log(age1, age2, age3);
 
-  // OR
-
-  // ALL IN ONE
-  return `Juice with ${cutFruitPieces(apples)} piece of apple and ${cutFruitPieces(oranges)} pieces of orange.`;
-}
-
-console.log(fruitProcessor(2, 3));
-
+const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
+console.log(ages);
