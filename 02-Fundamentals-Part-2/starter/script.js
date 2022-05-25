@@ -163,60 +163,95 @@ const does NOT define a constant array. It defines a constant reference to an ar
 // console.log(ages);
 
 
-////////////////////////////////////
-// BASIC ARRAY OPERATIONS (METHODS)
-////////////////////////////////////
+// ////////////////////////////////////
+// // BASIC ARRAY OPERATIONS (METHODS)
+// ////////////////////////////////////
+// /* NOTES:
+
+// ADDING ELEMENTS:
+// .push() => method add elements to the end of the array making it the last index...it is technically a function and we call the function directly into the array
+
+// .unshift() => function that adds an element in the front of the array. Index[0]
+
+// REMOVING ELEMENTS:
+// .pop() => Removes last index of the array
+// .shift() => Removes the first index of the array
+
+// IDENTIFY ELEMENTS: BOTH STRICT EQUALITY...there is no type coercion (i.e. "23" === 23 is false)
+// .indexOf() => Return the position of the index in the array...if the value is not found it returns -1
+
+// .includes() => Returns true/false. Method returns true if an index contains a specified index. Returns false if there is no existing index. The method IS CASE SENSITIVE!
+// */
+
+// const friends = ["Matthew", false, "Luke", "Joe", "Bri", "Mia"];
+
+// // Add elements
+// // const newLength = friends.push("Jay"); // Not a practical way...also it shows the number of index
+// // console.log(friends);
+// // console.log(newLength);
+
+// friends.push("Jay"); // Add element in last index
+// console.log(friends);
+
+// friends.unshift("John"); // Add element in the first index
+// console.log(friends);
+
+// // Remove elements
+// friends.pop(); // Removes last element/index
+// console.log(friends);
+
+// friends.shift();
+// console.log(friends); // Removes first element/index
+
+// // Identifying index/elements
+// console.log(friends.indexOf("Joe"));
+// console.log(friends.indexOf("Bob"));
+// console.log(friends.indexOf("23"));
+
+// console.log(friends.includes(false)); // true
+// console.log(friends.includes("joe")); // case sensitive. Results in false
+// console.log(friends.includes("Joe")); // True
+// friends.push(23);
+// console.log(friends.includes("23")); // False
+
+// // We can use .includes() method to write conditionals
+// if (friends.includes("Bri")) {
+//     console.log("You have a friend named Bri")
+// } else {
+//     console.log("Bing bong, ling long, ting tong")
+// }
+
+
+///////////////////////////
+// INTRODUCTION TO OBJECTS
+///////////////////////////
 /* NOTES:
+In an array of object, we use key-value pairs...for example:
 
-ADDING ELEMENTS:
-.push() => method add elements to the end of the array making it the last index...it is technically a function and we call the function directly into the array
+When using an object, we use curly braces and not brackets
 
-.unshift() => function that adds an element in the front of the array. Index[0]
-
-REMOVING ELEMENTS:
-.pop() => Removes last index of the array
-.shift() => Removes the first index of the array
-
-IDENTIFY ELEMENTS: BOTH STRICT EQUALITY...there is no type coercion (i.e. "23" === 23 is false)
-.indexOf() => Return the position of the index in the array...if the value is not found it returns -1
-
-.includes() => Returns true/false. Method returns true if an index contains a specified index. Returns false if there is no existing index. The method IS CASE SENSITIVE!
+const variable = {
+    key: value,
+    key: value,
+}
 */
 
-const friends = ["Matthew", false, "Luke", "Joe", "Bri", "Mia"];
+// Array
+const jayArray = [
+    "Jay",
+    "W",
+    2022 - 1998,
+    "unemployed 🥲",
+    ["Joe", "Bri", "Mia"]
+]
+console.log(jayArray);
 
-// Add elements
-// const newLength = friends.push("Jay"); // Not a practical way...also it shows the number of index
-// console.log(friends);
-// console.log(newLength);
-
-friends.push("Jay"); // Add element in last index
-console.log(friends);
-
-friends.unshift("John"); // Add element in the first index
-console.log(friends);
-
-// Remove elements
-friends.pop(); // Removes last element/index
-console.log(friends);
-
-friends.shift();
-console.log(friends); // Removes first element/index
-
-// Identifying index/elements
-console.log(friends.indexOf("Joe"));
-console.log(friends.indexOf("Bob"));
-console.log(friends.indexOf("23"));
-
-console.log(friends.includes(false)); // true
-console.log(friends.includes("joe")); // case sensitive. Results in false
-console.log(friends.includes("Joe")); // True
-friends.push(23);
-console.log(friends.includes("23")); // False
-
-// We can use .includes() method to write conditionals
-if (friends.includes("Bri")) {
-    console.log("You have a friend named Bri")
-} else {
-    console.log("Bing bong, ling long, ting tong")
+// Object
+const jay = {
+    firstName: "Jay",
+    lastName: "W",
+    age: 2022 - 1998,
+    job: "unemployed 🥲",
+    friends: ["Joe", "Bri", "Mia"]
 }
+console.log(jay);
