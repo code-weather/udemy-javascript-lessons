@@ -183,7 +183,7 @@ IDENTIFY ELEMENTS: BOTH STRICT EQUALITY...there is no type coercion (i.e. "23" =
 .includes() => Returns true/false. Method returns true if an index contains a specified index. Returns false if there is no existing index. The method IS CASE SENSITIVE!
 */
 
-const friends = ["Matthew", false, 23, "Luke", "Joe", "Bri", "Mia"];
+const friends = ["Matthew", false, "Luke", "Joe", "Bri", "Mia"];
 
 // Add elements
 // const newLength = friends.push("Jay"); // Not a practical way...also it shows the number of index
@@ -211,4 +211,12 @@ console.log(friends.indexOf("23"));
 console.log(friends.includes(false)); // true
 console.log(friends.includes("joe")); // case sensitive. Results in false
 console.log(friends.includes("Joe")); // True
+friends.push(23);
 console.log(friends.includes("23")); // False
+
+// We can use .includes() method to write conditionals
+if (friends.includes("Bri")) {
+    console.log("You have a friend named Bri")
+} else {
+    console.log("Bing bong, ling long, ting tong")
+}
