@@ -222,36 +222,115 @@ const does NOT define a constant array. It defines a constant reference to an ar
 // }
 
 
-///////////////////////////
-// INTRODUCTION TO OBJECTS
-///////////////////////////
+// ///////////////////////////
+// // INTRODUCTION TO OBJECTS
+// ///////////////////////////
+// /* NOTES:
+// In an array of object, we use key-value pairs...for example:
+
+// When using an object, we use curly braces and not brackets
+
+// const object = {
+//     key: value,
+//     key: value,
+// }
+// */
+
+// // Array
+// const jayArray = [
+//     "Jay",
+//     "W",
+//     2022 - 1998,
+//     "unemployed 🥲",
+//     ["Joe", "Bri", "Mia"]
+// ]
+// console.log(jayArray);
+
+// // Object
+// const jay = {
+//     firstName: "Jay",
+//     lastName: "W BABY!",
+//     age: 2022 - 1998,
+//     job: "unemployed 🥲",
+//     friends: ["Joe", "Bri", "Mia"]
+// }
+// console.log(jay); // In the browser console, it is listed alphabetical order
+
+
+/////////////////////////////
+// DOT V.S. BRACKET NOTATION
+/////////////////////////////
 /* NOTES:
-In an array of object, we use key-value pairs...for example:
+https://medium.com/dailyjs/dot-notation-vs-bracket-notation-eedea5fa8572 <= USEFUL WEBSITE
+const object = {
+    name: "value"
+};
+DOT NOTATION:
+object.name; // "value"
 
-When using an object, we use curly braces and not brackets
+BRACKET NOTATION:
+object["name"]; // "value"
 
-const variable = {
-    key: value,
-    key: value,
-}
+*** AS A DEFAULT, USE DOT NOTATION ***
+
+DOT NOTATION:
+PROS:
+- EASIER TO READ
+- FASTER TO TYPE
+
+CONS:
+- ISSUE WORKING WITH IDENTIFIERS
+- ISSUE WORKING WITH VARIABLES
+
+************** SIDE NOTE:
+Idenifiers => a sequence of characters in the code that identifies a variable, function, or property.
+
+Rules of identifier:
+- case sensitve
+- can contain Unicode letters
+- $, -, are allowed
+- Digits (0-9) are okay BUT may not start with a digit
+********************************************
+Read the rest on the website on top.....
 */
-
-// Array
-const jayArray = [
-    "Jay",
-    "W",
-    2022 - 1998,
-    "unemployed 🥲",
-    ["Joe", "Bri", "Mia"]
-]
-console.log(jayArray);
 
 // Object
 const jay = {
     firstName: "Jay",
-    lastName: "W",
+    lastName: "Double-U",
     age: 2022 - 1998,
     job: "unemployed 🥲",
     friends: ["Joe", "Bri", "Mia"]
 }
 console.log(jay);
+
+console.log(jay.lastName);
+console.log(jay["lastName"]);
+
+// Bracket notation can concatenate string and variable. Example shown below...
+const nameKey = "Name";
+console.log(jay["first" + nameKey]);
+console.log(jay["last" + nameKey]);
+console.log(jay[`first${nameKey}`]);
+
+// console.log(jay."first" + nameKey); // Concatenating/use template literal a string with dot notation will result in an error
+
+const interestedIn = prompt("What do you want to know about me? Choose between firstName, lastName, age, job, and friends");
+// console.log(jay.interestedIn); // Result of undefined bc there's no property (i.e. firstName, lastName, age) with interestedIn
+
+// console.log(jay[interestedIn]); // Use bracket notation for this prompt example
+
+if (jay[interestedIn]) {
+    console.log(`Nosy butthole tickler...but here's the info 👉 ${jay[interestedIn]}`)
+} else {
+    console.log("Wrong request! CAN'T YOU READ, DUMMY??? Choose b/n firstName, lastName, age, job, and friends")
+}
+
+// Check the browser console and not the terminal
+jay.location = "USA"; // 
+jay["twitter"] = "N/A";
+console.log(jay);
+
+// Challenge
+// "Jay has 3 friends, and his best friend is named Joe"
+console.log(`${jay.firstName} has ${jay.friends.length} friends, and his best friend is named ${jay.friends[0]}`)
