@@ -257,80 +257,126 @@ const does NOT define a constant array. It defines a constant reference to an ar
 // console.log(jay); // In the browser console, it is listed alphabetical order
 
 
-/////////////////////////////
-// DOT V.S. BRACKET NOTATION
-/////////////////////////////
-/* NOTES:
-https://medium.com/dailyjs/dot-notation-vs-bracket-notation-eedea5fa8572 <= USEFUL WEBSITE
-const object = {
-    name: "value"
-};
-DOT NOTATION:
-object.name; // "value"
+// /////////////////////////////
+// // DOT V.S. BRACKET NOTATION
+// /////////////////////////////
+// /* NOTES:
+// https://medium.com/dailyjs/dot-notation-vs-bracket-notation-eedea5fa8572 <= USEFUL WEBSITE
+// const object = {
+//     name: "value"
+// };
+// DOT NOTATION:
+// object.name; // "value"
 
-BRACKET NOTATION:
-object["name"]; // "value"
+// BRACKET NOTATION:
+// object["name"]; // "value"
 
-*** AS A DEFAULT, USE DOT NOTATION ***
+// *** AS A DEFAULT, USE DOT NOTATION ***
 
-DOT NOTATION:
-PROS:
-- EASIER TO READ
-- FASTER TO TYPE
+// DOT NOTATION:
+// PROS:
+// - EASIER TO READ
+// - FASTER TO TYPE
 
-CONS:
-- ISSUE WORKING WITH IDENTIFIERS
-- ISSUE WORKING WITH VARIABLES
+// CONS:
+// - ISSUE WORKING WITH IDENTIFIERS
+// - ISSUE WORKING WITH VARIABLES
 
-************** SIDE NOTE:
-Idenifiers => a sequence of characters in the code that identifies a variable, function, or property.
+// ************** SIDE NOTE:
+// Idenifiers => a sequence of characters in the code that identifies a variable, function, or property.
 
-Rules of identifier:
-- case sensitve
-- can contain Unicode letters
-- $, -, are allowed
-- Digits (0-9) are okay BUT may not start with a digit
-********************************************
-Read the rest on the website on top.....
-*/
+// Rules of identifier:
+// - case sensitve
+// - can contain Unicode letters
+// - $, -, are allowed
+// - Digits (0-9) are okay BUT may not start with a digit
+// ********************************************
+// Read the rest on the website on top.....
+// */
 
-// Object
+// // Object
+// const jay = {
+//     firstName: "Jay",
+//     lastName: "Double-U",
+//     age: 2022 - 1998,
+//     job: "unemployed 🥲",
+//     friends: ["Joe", "Bri", "Mia"]
+// }
+// console.log(jay);
+
+// console.log(jay.lastName);
+// console.log(jay["lastName"]);
+
+// // Bracket notation can concatenate string and variable. Example shown below...
+// const nameKey = "Name";
+// console.log(jay["first" + nameKey]);
+// console.log(jay["last" + nameKey]);
+// console.log(jay[`first${nameKey}`]);
+
+// // console.log(jay."first" + nameKey); // Concatenating/use template literal a string with dot notation will result in an error
+
+// const interestedIn = prompt("What do you want to know about me? Choose between firstName, lastName, age, job, and friends");
+// // console.log(jay.interestedIn); // Result of undefined bc there's no property (i.e. firstName, lastName, age) with interestedIn
+
+// // console.log(jay[interestedIn]); // Use bracket notation for this prompt example
+
+// if (jay[interestedIn]) {
+//     console.log(`Nosy butthole tickler...but here's the info 👉 ${jay[interestedIn]}`)
+// } else {
+//     console.log("Wrong request! CAN'T YOU READ, DUMMY??? Choose b/n firstName, lastName, age, job, and friends")
+// }
+
+// // Check the browser console and not the terminal
+// jay.location = "USA"; // 
+// jay["twitter"] = "N/A";
+// console.log(jay);
+
+// // Challenge
+// // "Jay has 3 friends, and his best friend is named Joe"
+// console.log(`${jay.firstName} has ${jay.friends.length} friends, and his best friend is named ${jay.friends[0]}`)
+
+
+//////////////////
+// OBJECT METHODS
+//////////////////
 const jay = {
     firstName: "Jay",
     lastName: "Double-U",
-    age: 2022 - 1998,
-    job: "unemployed 🥲",
-    friends: ["Joe", "Bri", "Mia"]
-}
-console.log(jay);
+    birthYear: 1998,
+    job: "unemployed for now 🥲",
+    friends: ["Joe", "Bri", "Mia"],
+    hasDriversLicense: true,
 
-console.log(jay.lastName);
-console.log(jay["lastName"]);
+    // calcAge: function (birthYear) {
+    //     return 2022 - birthYear;
+    // }
 
-// Bracket notation can concatenate string and variable. Example shown below...
-const nameKey = "Name";
-console.log(jay["first" + nameKey]);
-console.log(jay["last" + nameKey]);
-console.log(jay[`first${nameKey}`]);
+    // calcAge: function () {
+    //     // console.log(this);
+    //     return 2022 - this.birthYear;
+    // }
 
-// console.log(jay."first" + nameKey); // Concatenating/use template literal a string with dot notation will result in an error
+    calcAge: function () {
+        this.age = 2022 - this.birthYear;
+        return this.age;
+    },
 
-const interestedIn = prompt("What do you want to know about me? Choose between firstName, lastName, age, job, and friends");
-// console.log(jay.interestedIn); // Result of undefined bc there's no property (i.e. firstName, lastName, age) with interestedIn
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()}-years old who is ${this.job}, and he has ${this.hasDriversLicense ? "a" : "no"} driver's license`;
+    }
+};
 
-// console.log(jay[interestedIn]); // Use bracket notation for this prompt example
+// console.log(jay.calcAge(1998)); // for the first exmaple
+// console.log(jay["calcAge"](1998)); // for the 1st example
 
-if (jay[interestedIn]) {
-    console.log(`Nosy butthole tickler...but here's the info 👉 ${jay[interestedIn]}`)
-} else {
-    console.log("Wrong request! CAN'T YOU READ, DUMMY??? Choose b/n firstName, lastName, age, job, and friends")
-}
+console.log(jay.calcAge());
 
-// Check the browser console and not the terminal
-jay.location = "USA"; // 
-jay["twitter"] = "N/A";
-console.log(jay);
+console.log(jay.age);
+console.log(jay.age);
+console.log(jay.age);
 
 // Challenge
-// "Jay has 3 friends, and his best friend is named Joe"
-console.log(`${jay.firstName} has ${jay.friends.length} friends, and his best friend is named ${jay.friends[0]}`)
+// "Jay is a 24-years old who is unemployed 🥲, and he has a/no driver's license"
+// console.log(`${jay.firstName} is a ${jay.age}-years old who is ${jay.job}, and he ${jay.hasDriversLicense ? "has a driver's license" : "has no driver's license"}`) //  ** THIS IS A MISTAKE **
+
+console.log(jay.getSummary()); // On line 364
