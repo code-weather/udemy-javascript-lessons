@@ -336,47 +336,81 @@ const does NOT define a constant array. It defines a constant reference to an ar
 // console.log(`${jay.firstName} has ${jay.friends.length} friends, and his best friend is named ${jay.friends[0]}`)
 
 
-//////////////////
-// OBJECT METHODS
-//////////////////
-const jay = {
-    firstName: "Jay",
-    lastName: "Double-U",
-    birthYear: 1998,
-    job: "unemployed for now 🥲",
-    friends: ["Joe", "Bri", "Mia"],
-    hasDriversLicense: true,
+// //////////////////
+// // OBJECT METHODS
+// //////////////////
+// const jay = {
+//     firstName: "Jay",
+//     lastName: "Double-U",
+//     birthYear: 1998,
+//     job: "unemployed for now 🥲",
+//     friends: ["Joe", "Bri", "Mia"],
+//     hasDriversLicense: true,
 
-    // calcAge: function (birthYear) {
-    //     return 2022 - birthYear;
-    // }
+//     // calcAge: function (birthYear) {
+//     //     return 2022 - birthYear;
+//     // }
 
-    // calcAge: function () {
-    //     // console.log(this);
-    //     return 2022 - this.birthYear;
-    // }
+//     // calcAge: function () {
+//     //     // console.log(this);
+//     //     return 2022 - this.birthYear;
+//     // }
 
-    calcAge: function () {
-        this.age = 2022 - this.birthYear;
-        return this.age;
-    },
+//     calcAge: function () {
+//         this.age = 2022 - this.birthYear;
+//         return this.age;
+//     },
 
-    getSummary: function () {
-        return `${this.firstName} is a ${this.calcAge()}-years old who is ${this.job}, and he has ${this.hasDriversLicense ? "a" : "no"} driver's license`;
-    }
-};
+//     getSummary: function () {
+//         return `${this.firstName} is a ${this.calcAge()}-years old who is ${this.job}, and he has ${this.hasDriversLicense ? "a" : "no"} driver's license`;
+//     }
+// };
 
-// console.log(jay.calcAge(1998)); // for the first exmaple
-// console.log(jay["calcAge"](1998)); // for the 1st example
+// // console.log(jay.calcAge(1998)); // for the first exmaple
+// // console.log(jay["calcAge"](1998)); // for the 1st example
 
-console.log(jay.calcAge());
+// console.log(jay.calcAge());
 
-console.log(jay.age);
-console.log(jay.age);
-console.log(jay.age);
+// console.log(jay.age);
+// console.log(jay.age);
+// console.log(jay.age);
 
-// Challenge
-// "Jay is a 24-years old who is unemployed 🥲, and he has a/no driver's license"
-// console.log(`${jay.firstName} is a ${jay.age}-years old who is ${jay.job}, and he ${jay.hasDriversLicense ? "has a driver's license" : "has no driver's license"}`) //  ** THIS IS A MISTAKE **
+// // Challenge
+// // "Jay is a 24-years old who is unemployed 🥲, and he has a/no driver's license"
+// // console.log(`${jay.firstName} is a ${jay.age}-years old who is ${jay.job}, and he ${jay.hasDriversLicense ? "has a driver's license" : "has no driver's license"}`) //  ** THIS IS A MISTAKE **
 
-console.log(jay.getSummary()); // On line 364
+// console.log(jay.getSummary()); // On line 364
+
+
+///////////////////////////
+// ITERATION: THE FOR LOOP
+///////////////////////////
+// console.log("Lifting weights repetition 1 🏋️");
+// console.log("Lifting weights repetition 2 🏋️");
+// console.log("Lifting weights repetition 3 🏋️");
+// console.log("Lifting weights repetition 4 🏋️");
+// console.log("Lifting weights repetition 5 🏋️");
+// console.log("Lifting weights repetition 6 🏋️");
+// console.log("Lifting weights repetition 7 🏋️");
+// console.log("Lifting weights repetition 8 🏋️");
+// console.log("Lifting weights repetition 9 🏋️");
+// console.log("Lifting weights repetition 10 🏋️");
+
+// //for loop keeps running while conditions are TRUE
+// for(let rep = 1; rep <= 10; rep ++) {
+//     // console.log("Lifting weights repetition 1")
+//     console.log(`Lifting weights repetition ${rep} 🏋️`)
+// }
+
+//////////////////////////////////////////////////////////////
+
+// for(let rep = 2; rep <= 10; rep += 2) {
+//     console.log(`Lifting weights repetition ${rep} 🏋️`)
+// }
+
+//////////////////////////////////////////////////////////////
+
+// // Without a condition, the loop will ALWAYS evaluate to true. If there's an ongoing loop, hit CTRL + C to kill the terminal
+// for(let i = 1; i++;) {
+//     console.log(`Counting down from ${i}`)
+// }
