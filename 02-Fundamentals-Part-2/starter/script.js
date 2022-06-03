@@ -383,7 +383,7 @@ const does NOT define a constant array. It defines a constant reference to an ar
 
 
 ///////////////////////////
-// ITERATION: THE FOR LOOP
+// ITERATION: THE 'FOR' LOOP
 ///////////////////////////
 // console.log("Lifting weights repetition 1 🏋️");
 // console.log("Lifting weights repetition 2 🏋️");
@@ -414,3 +414,102 @@ const does NOT define a constant array. It defines a constant reference to an ar
 // for(let i = 1; i++;) {
 //     console.log(`Counting down from ${i}`)
 // }
+
+
+// ///////////////////////////////////////////
+// // LOOPING ARRAYS, BREAKING AND CONTINUING
+// ///////////////////////////////////////////
+// /* NOTES:
+//     - Continue statement => Exits the current iteration of the loop and continue to the next one
+
+//     - Break statement => Used to completely terminate the whole loop.
+// */
+
+// // Looping arrays
+// const jayArray = [
+//     "Jay",
+//     "W",
+//     2022 - 1998,
+//     "unemployed 🥲",
+//     ["Joe", "Bri", "Mia"],
+//     true
+// ]
+
+// const types = [];
+
+// // console.log(jayArray[0])
+// // console.log(jayArray[1])
+// // ...
+// // console.log(jayArray[4])
+// // console.log(jayArray[5]) does NOT exist
+
+// for(let i = 0; i < jayArray.length; i++) {
+//     // Reading from Jay array
+//     console.log(jayArray[i], typeof jayArray[i])
+
+//     // Filling types array
+//     // types[i] = typeof jayArray[i];
+//     types.push(typeof jayArray[i]);
+// }
+
+// console.log(types);
+
+// const years = [1991, 2007, 1969, 2020];
+// const ages = [];
+
+// for (let i = 0; i < years.length; i++) {
+//     ages.push(2037 - years[i]);
+// }
+// console.log(ages);
+
+// // Continue statement and break statement (Notes on top)
+// console.log("----- ONLY STRINGS -----")
+// for (let i = 0; i < jayArray.length; i++) {
+//     if (typeof jayArray[i] == "string") continue;
+
+//     console.log(jayArray[i], typeof jayArray[i])
+// }
+
+// console.log("----- BREAK WITH NUMBER -----")
+// for (let i = 0; i < jayArray.length; i++) {
+//     if (typeof jayArray[i] == "number") break;
+
+//     console.log(jayArray[i], typeof jayArray[i]);
+// }
+
+
+// ////////////////////////////////////////
+// // LOOPING BACKWARDS AND LOOPS IN LOOPS
+// ////////////////////////////////////////
+// // Looping backwards
+// const jayArray = [
+//     "Jay",
+//     "W",
+//     2022 - 1998,
+//     "unemployed 🥲",
+//     ["Joe", "Bri", "Mia"],
+//     true
+// ]
+
+// // previous lecture we loop from 1st to last index (0 => 4)
+// // Now we will be looping from last to 1st index
+
+// for (let i = jayArray.length - 1; i >= 0; i--) {
+//     console.log(jayArray[i])
+// }
+
+// // Loops in loops
+//                     // exercise < 4 for logging 3 exercises
+// for (let exercise = 1; exercise <= 3; exercise++) {
+//     console.log(`--- Starting exercise ${exercise} ---`);
+
+//                     // rep < 6 for logging 5 reps
+//     for (let rep = 1; rep <= 5; rep++) {
+//         console.log(`Lifting weight repetition ${rep} 🏋️`)
+//     }
+// }
+
+
+//////////////////
+// THE WHILE LOOP
+//////////////////
